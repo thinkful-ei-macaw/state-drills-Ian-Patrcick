@@ -3,12 +3,16 @@ import React from "react";
 class RouletteGun extends React.Component {
   handleClick = () => {
     this.setState({ spinningTheChamber: true });
-    this.timeout = setTimeout(callback => {
+    this.timeout = setTimeout(() => {
       const num = Math.ceil(Math.random() * 8);
       this.setState({ chamber: num, spinningTheChamber: false });
     }, 2000);
-    clearTimeout(this.timeout);
+    console.log(this.timeout);
   };
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +32,7 @@ class RouletteGun extends React.Component {
   render() {
     return (
       <div>
-        <p>Stuff</p>
+        <p>{this.generateMessage()}</p>
         <button onClick={this.handleClick}>Pull the trigger!</button>
       </div>
     );
