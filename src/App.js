@@ -1,14 +1,26 @@
 import React from "react";
-import Split from "./composition/Split";
-import "./App.css";
-import Tooltip from "./composition/Tooltip";
-import TheDate from "./TheDate";
-import Counter from "./Counter";
-import Bomb from "./state-drills/Bomb";
 import RouletteGun from "./state-drills/RouletteGun";
-
-function App() {
-  return <RouletteGun bulletInChamber='8' />;
+import Tabs from './state-drills/Tabs'
+const tabsProp = [
+  {
+    name: 'First tab',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.'
+  },
+  {
+    name: 'Second tab',
+    content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+  },
+  {
+    name: 'Third tab',
+    content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.'
+  },
+];
+class App extends React.Component {
+  render() {
+    return <div>
+      <Tabs tabs={tabsProp} />
+    </div>
+  }
 }
 
 export default App;
