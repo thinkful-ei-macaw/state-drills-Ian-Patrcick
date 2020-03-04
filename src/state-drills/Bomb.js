@@ -5,7 +5,6 @@ class Bomb extends React.Component {
     super(props);
     this.state = {
       count: 1
-      //output: "tock"
     };
   }
   componentDidMount() {
