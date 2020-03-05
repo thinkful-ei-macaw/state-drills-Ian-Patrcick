@@ -2,6 +2,6 @@
 
 exports[`TheDate Component renders the UI as expected 1`] = `
 <div>
-  3/4/2020, 10:37:56 AM
+  3/4/2020, 5:42:54 PM
 </div>
 `;

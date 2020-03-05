@@ -1,5 +1,5 @@
 import React from "react";
-import RouletteGun from "./state-drills/RouletteGun";
+import Accordian from './state-drills/Accordian'
 import Tabs from './state-drills/Tabs'
 const tabsProp = [
   {
@@ -15,10 +15,24 @@ const tabsProp = [
     content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.'
   },
 ];
+const sections = [
+  {
+    title: 'Section 1',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  {
+    title: 'Section 2',
+    content: 'Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!',
+  },
+  {
+    title: 'Section 3',
+    content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
+  },
+]
 class App extends React.Component {
   render() {
     return <div>
-      <Tabs tabs={tabsProp} />
+      <Accordian sections={sections} />
     </div>
   }
 }
